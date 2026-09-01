@@ -13,7 +13,43 @@
       --white: #ffffff;
       --text-color: #2f5d3b;
     }
-
+    
+    .theme-green {
+      --light-color: #dcefd8;
+      --mid-color: #9fcb9b;
+      --dark-color: #2f5d3b;
+      --text-color: #2f5d3b;
+      --muted-color: #456b4d;
+      --hover-color: #24492e;
+    }
+    
+    .theme-purple {
+      --light-color: #eadff0;
+      --mid-color: #b895c7;
+      --dark-color: #654475;
+      --text-color: #654475;
+      --muted-color: #80658d;
+      --hover-color: #513560;
+    }
+    
+    .theme-red {
+      --light-color: #f3dddd;
+      --mid-color: #d49a9a;
+      --dark-color: #8a3f3f;
+      --text-color: #8a3f3f;
+      --muted-color: #9d6060;
+      --hover-color: #713333;
+    }
+    
+    .theme-blue {
+      --light-color: #dce8f3;
+      --mid-color: #9bb8d3;
+      --dark-color: #416482;
+      --text-color: #416482;
+      --muted-color: #5e7c96;
+      --hover-color: #34536d;
+    }
+    
     * {
       margin: 0;
       padding: 0;
@@ -82,7 +118,7 @@
 
     .subtitle {
       font-size: 1.15rem;
-      color: #456b4d;
+      color: var(--muted-color);
       margin-bottom: 30px;
       line-height: 1.6;
     }
@@ -110,7 +146,7 @@
     .contact-box p {
       line-height: 1.7;
       margin-bottom: 18px;
-      color: #456b4d;
+      color: var(--muted-color);
     }
 
     .links {
@@ -135,7 +171,7 @@
     }
 
     .links a:hover {
-      background: #24492e;
+      background: var(--hover-color);
       transform: translateY(-3px);
       box-shadow:
         0 8px 20px rgba(47, 93, 59, 0.25),
@@ -182,7 +218,7 @@
     .service-title {
       font-size: 0.95rem;
       font-weight: 600;
-      color: #456b4d;
+      color: var(--muted-color);
       margin-bottom: 10px;
     }
     
@@ -233,7 +269,7 @@
   </style>
 </head>
 
-<body>
+<body class="theme-green">
 
   <main class="container">
 
