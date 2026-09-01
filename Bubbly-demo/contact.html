@@ -7,40 +7,49 @@
   <title>Contact Poop Scoop Detail | Boise Dog Waste Removal</title>
   <meta name="description" content="Contact Poop Scoop Detail for questions, service requests, or quotes. Serving Boise." />
 
-  <style>
+   <style>
     :root {
-      --light-green: #dcefd8;
-      --mid-green: #9fcb9b;
-      --dark-green: #2f5d3b;
+      --light-color: #dcefd8;
+      --mid-color: #9fcb9b;
+      --dark-color: #2f5d3b;
       --white: #ffffff;
-      --text: #2f5d3b;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 18px 0 26px 0;
+      --text-color: #2f5d3b;
     }
     
-    .nav a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--dark-green);
-      background: rgba(159, 203, 155, 0.18);
-      padding: 8px 14px;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-      border: 1px solid rgba(47, 93, 59, 0.15);
+    .theme-green {
+      --light-color: #dcefd8;
+      --mid-color: #9fcb9b;
+      --dark-color: #2f5d3b;
+      --text-color: #2f5d3b;
+      --muted-color: #456b4d;
+      --hover-color: #24492e;
     }
     
-    .nav a:hover {
-      background: var(--dark-green);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(47, 93, 59, 0.2);
+    .theme-purple {
+      --light-color: #eadff0;
+      --mid-color: #b895c7;
+      --dark-color: #654475;
+      --text-color: #654475;
+      --muted-color: #80658d;
+      --hover-color: #513560;
+    }
+    
+    .theme-red {
+      --light-color: #f3dddd;
+      --mid-color: #d49a9a;
+      --dark-color: #8a3f3f;
+      --text-color: #8a3f3f;
+      --muted-color: #9d6060;
+      --hover-color: #713333;
+    }
+    
+    .theme-blue {
+      --light-color: #dce8f3;
+      --mid-color: #9bb8d3;
+      --dark-color: #416482;
+      --text-color: #416482;
+      --muted-color: #5e7c96;
+      --hover-color: #34536d;
     }
     
     * {
@@ -53,17 +62,17 @@
       opacity: 0;
       animation: pageFadeIn 0.8s ease-out forwards;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(180deg, var(--white) 0%, var(--light-green) 100%);
-      color: var(--text);
+      background: linear-gradient(
+        180deg,
+        var(--white) 0%,
+        var(--light-color) 100%
+      );
+      color: var(--text-color);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 40px 20px;
-    }
-
-    @keyframes pageFadeIn {
-      to { opacity: 1; }
     }
 
     .container {
@@ -78,88 +87,191 @@
       backdrop-filter: blur(4px);
     }
 
+    @keyframes pageFadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
     .logo {
+      opacity: 0;
+      transform: translateY(10px) scale(0.98);
+      animation: logoEnter 1s ease-out 0.2s forwards;
       max-width: 240px;
       width: 100%;
       margin: 0 auto 28px auto;
       display: block;
     }
 
+    @keyframes logoEnter {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
     h1 {
       font-size: clamp(2.2rem, 4vw, 3.2rem);
       font-weight: 700;
-      color: var(--dark-green);
+      color: var(--dark-color);
       margin-bottom: 14px;
+      letter-spacing: -1px;
     }
 
     .subtitle {
-      font-size: 1.1rem;
-      color: #456b4d;
-      line-height: 1.7;
-      margin-bottom: 28px;
+      font-size: 1.15rem;
+      color: var(--muted-color);
+      margin-bottom: 30px;
+      line-height: 1.6;
     }
 
-    .honeypot {
-      display: none;
+    .construction-badge {
+      display: inline-block;
+      background: var(--dark-color);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0 auto 28px auto;
+      letter-spacing: 0.3px;
     }
-    
-    .form-box {
+
+    .contact-box {
       background: #f7fbf6;
       border: 1px solid rgba(47, 93, 59, 0.12);
       border-radius: 18px;
       padding: 28px;
-      text-align: left;
+      margin-top: 10px;
     }
 
-    label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #456b4d;
-      margin-bottom: 4px;
-      display: block;
+    .contact-box p {
+      line-height: 1.7;
+      margin-bottom: 18px;
+      color: var(--muted-color);
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid rgba(47, 93, 59, 0.2);
-      font-family: inherit;
-      margin-bottom: 14px;
-      outline: none;
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 20px;
     }
 
-    input:focus, textarea:focus {
-      border-color: var(--mid-green);
-      box-shadow: 0 0 0 2px rgba(159,203,155,0.3);
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    .submit-btn {
-      width: 100%;
-      background: var(--dark-green);
+    .links a {
+      text-decoration: none;
       color: white;
-      border: none;
-      padding: 12px;
+      background: var(--dark-color);
+      padding: 12px 22px;
       border-radius: 12px;
       font-weight: 600;
-      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(47, 93, 59, 0.15);
+      position: relative;
+      overflow: hidden;
     }
 
-    .note {
-      font-size: 0.85rem;
+    .links a:hover {
+      background: var(--hover-color);
+      transform: translateY(-3px);
+      box-shadow:
+        0 8px 20px rgba(47, 93, 59, 0.25),
+        0 0 12px rgba(159, 203, 155, 0.35);
+    }
+
+    .links a::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+      );
+      transform: skewX(-20deg);
+    }
+
+    .links a:hover::before {
+      animation: shimmer 0.6s ease;
+    }
+    
+    @keyframes shimmer {
+      100% {
+        left: 125%;
+      }
+    }
+    
+    .badge-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .service-area {
+      margin-bottom: 26px;
+      text-align: center;
+    }
+    
+    .service-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--muted-color);
+      margin-bottom: 10px;
+    }
+    
+    .service-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      gap: 8px 40px;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--dark-color);
+      font-weight: 500;
+    }
+
+    .service-grid li {
+      text-align: left;
+    }
+    
+    .email {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--dark-color);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 34px;
+      font-size: 0.9rem;
       color: #6d8a73;
-      margin-top: 10px;
-      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 38px 24px;
+      }
+
+      .links {
+        flex-direction: column;
+      }
+
+      .links a {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
-<body>
+<body class="theme-red">
 
 <main class="container">
 
