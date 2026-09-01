@@ -7,38 +7,47 @@
 
   <style>
     :root {
-      --light-green: #dcefd8;
-      --mid-green: #9fcb9b;
-      --dark-green: #2f5d3b;
+      --light-color: #dcefd8;
+      --mid-color: #9fcb9b;
+      --dark-color: #2f5d3b;
       --white: #ffffff;
-      --text: #2f5d3b;
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 18px 0 26px 0;
+      --text-color: #2f5d3b;
     }
     
-    .nav a {
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--dark-green);
-      background: rgba(159, 203, 155, 0.18);
-      padding: 8px 14px;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-      border: 1px solid rgba(47, 93, 59, 0.15);
+    .theme-green {
+      --light-color: #dcefd8;
+      --mid-color: #9fcb9b;
+      --dark-color: #2f5d3b;
+      --text-color: #2f5d3b;
+      --muted-color: #456b4d;
+      --hover-color: #24492e;
     }
     
-    .nav a:hover {
-      background: var(--dark-green);
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(47, 93, 59, 0.2);
+    .theme-purple {
+      --light-color: #eadff0;
+      --mid-color: #b895c7;
+      --dark-color: #654475;
+      --text-color: #654475;
+      --muted-color: #80658d;
+      --hover-color: #513560;
+    }
+    
+    .theme-red {
+      --light-color: #f3dddd;
+      --mid-color: #d49a9a;
+      --dark-color: #8a3f3f;
+      --text-color: #8a3f3f;
+      --muted-color: #9d6060;
+      --hover-color: #713333;
+    }
+    
+    .theme-blue {
+      --light-color: #dce8f3;
+      --mid-color: #9bb8d3;
+      --dark-color: #416482;
+      --text-color: #416482;
+      --muted-color: #5e7c96;
+      --hover-color: #34536d;
     }
     
     * {
@@ -54,9 +63,9 @@
       background: linear-gradient(
         180deg,
         var(--white) 0%,
-        var(--light-green) 100%
+        var(--light-color) 100%
       );
-      color: var(--text);
+      color: var(--text-color);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -102,21 +111,21 @@
     h1 {
       font-size: clamp(2.2rem, 4vw, 3.2rem);
       font-weight: 700;
-      color: var(--dark-green);
+      color: var(--dark-color);
       margin-bottom: 14px;
       letter-spacing: -1px;
     }
 
     .subtitle {
       font-size: 1.15rem;
-      color: #456b4d;
+      color: var(--muted-color);
       margin-bottom: 30px;
       line-height: 1.6;
     }
 
     .construction-badge {
       display: inline-block;
-      background: var(--dark-green);
+      background: var(--dark-color);
       color: white;
       padding: 10px 18px;
       border-radius: 999px;
@@ -137,7 +146,7 @@
     .contact-box p {
       line-height: 1.7;
       margin-bottom: 18px;
-      color: #456b4d;
+      color: var(--muted-color);
     }
 
     .links {
@@ -151,7 +160,7 @@
     .links a {
       text-decoration: none;
       color: white;
-      background: var(--dark-green);
+      background: var(--dark-color);
       padding: 12px 22px;
       border-radius: 12px;
       font-weight: 600;
@@ -162,7 +171,7 @@
     }
 
     .links a:hover {
-      background: #24492e;
+      background: var(--hover-color);
       transform: translateY(-3px);
       box-shadow:
         0 8px 20px rgba(47, 93, 59, 0.25),
@@ -209,7 +218,7 @@
     .service-title {
       font-size: 0.95rem;
       font-weight: 600;
-      color: #456b4d;
+      color: var(--muted-color);
       margin-bottom: 10px;
     }
     
@@ -222,7 +231,7 @@
       padding: 0;
       margin: 0;
       font-size: 0.9rem;
-      color: var(--dark-green);
+      color: var(--dark-color);
       font-weight: 500;
     }
 
@@ -233,7 +242,7 @@
     .email {
       display: inline-block;
       margin-top: 16px;
-      color: var(--dark-green);
+      color: var(--dark-color);
       font-weight: 600;
       text-decoration: none;
     }
@@ -260,7 +269,7 @@
   </style>
 </head>
 
-<body>
+<body class="theme-green">
 
   <main class="container">
 
