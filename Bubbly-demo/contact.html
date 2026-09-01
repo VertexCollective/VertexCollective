@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Poop Scoop Detail | Boise Dog Waste Removal</title>
+  <meta name="description" content="Contact Poop Scoop Detail for questions, service requests, or quotes. Serving Boise." />
+
+  <style>
+    :root {
+      --light-green: #dcefd8;
+      --mid-green: #9fcb9b;
+      --dark-green: #2f5d3b;
+      --white: #ffffff;
+      --text: #2f5d3b;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 18px 0 26px 0;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dark-green);
+      background: rgba(159, 203, 155, 0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(47, 93, 59, 0.15);
+    }
+    
+    .nav a:hover {
+      background: var(--dark-green);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(47, 93, 59, 0.2);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      opacity: 0;
+      animation: pageFadeIn 0.8s ease-out forwards;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--white) 0%, var(--light-green) 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    @keyframes pageFadeIn {
+      to { opacity: 1; }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid rgba(47, 93, 59, 0.12);
+      border-radius: 24px;
+      padding: 48px 36px;
+      max-width: 720px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 12px 40px rgba(47, 93, 59, 0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    .logo {
+      max-width: 240px;
+      width: 100%;
+      margin: 0 auto 28px auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--dark-green);
+      margin-bottom: 14px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #456b4d;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .honeypot {
+      display: none;
+    }
+    
+    .form-box {
+      background: #f7fbf6;
+      border: 1px solid rgba(47, 93, 59, 0.12);
+      border-radius: 18px;
+      padding: 28px;
+      text-align: left;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #456b4d;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(47, 93, 59, 0.2);
+      font-family: inherit;
+      margin-bottom: 14px;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--mid-green);
+      box-shadow: 0 0 0 2px rgba(159,203,155,0.3);
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--dark-green);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #6d8a73;
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="container">
+
+  <img src="assets/PS Detail Fin.png" class="logo" alt="Poop Scoop Detail Logo" />
+
+  <nav class="nav">
+    <a href="index2.html">Home</a> 
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+  <h1>Contact Us</h1>
+
+  <p class="subtitle">
+    Questions, special requests, or general inquiries? We’re happy to help.
+    <br />
+    We respond to all inquiries within 24 hours.
+  </p>
+
+  <section class="form-box">
+
+    <form id="contactForm" action="https://formspree.io/f/mbdwqlrp" method="POST">
+    
+      <!-- =======================
+           SPAM / SYSTEM FIELDS
+      ======================== -->
+    
+      <!-- Honeypot (spam trap) -->
+      <div class="honeypot">
+        <label>Do not fill this out</label>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+    
+      <input type="hidden" name="_subject" value="New Contact Message - Poop Scoop Detail" />
+      <input type="hidden" name="_template" value="table" />
+    
+      <!-- =======================
+               USER FIELDS
+      ======================== -->
+    
+      <label>Name</label>
+      <input type="text" name="name" required />
+    
+      <label>Email</label>
+      <input type="email" name="email" required />
+    
+      <label>Phone (optional)</label>
+      <input type="tel" name="phone" />
+    
+      <label>Message</label>
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+    
+      <label>Approximate Address / Area</label>
+      <input type="text" name="location" placeholder="City, neighborhood, or address (optional)" />
+    
+      <label>Date of Last Cleanup</label>
+      <input 
+        type="text" 
+        name="lastCleanup" 
+        placeholder="Month / Year (or approximate if unsure)"
+      />
+    
+      <!-- =======================
+               SUBMIT
+      ======================== -->
+    
+      <button class="submit-btn" type="submit">
+        Send Message
+      </button>
+    
+      <div class="note">
+        If you’re requesting a quote, we may follow up with a quick walkthrough or clarification so we can provide accurate pricing.
+      </div>
+    
+    </form>
+
+  </section>
+
+</main>
+
+  <script>
+  const contactForm = document.getElementById("contactForm");
+
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = "thank-you.html";
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+
+    } catch (error) {
+      alert("Network error. Please try again.");
+    }
+  });
+</script>
+  
+</body>
+</html>
