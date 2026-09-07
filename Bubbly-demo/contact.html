@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact Poop Scoop Detail | Boise Dog Waste Removal</title>
-  <meta name="description" content="Contact Poop Scoop Detail for questions, service requests, or quotes. Serving Boise." />
+  <title>Contact Evergreen & Co | Demo Contact Form</title>
+  <meta name="description" content="Contact Evergreen & Co. for questions, service requests, or quotes. Serving Boise." />
 
    <style>
     :root {
@@ -436,7 +436,7 @@
 
 <main class="container">
 
-  <img src="assets/PS Detail Fin.png" class="logo" alt="Poop Scoop Detail Logo" />
+  <img src="assets/PS Detail Fin.png" class="logo" alt="Boise Business Logo" />
 
   <nav class="nav">
     <a href="index2.html">Home</a> 
@@ -452,7 +452,7 @@
   <p class="subtitle">
     Questions, special requests, or general inquiries? We’re happy to help.
     <br />
-    We respond to all inquiries within 24 hours.
+    We’ll get back to you as soon as we can.
   </p>
 
   <section class="form-box">
@@ -489,7 +489,7 @@
       <label>Approximate Address / Area</label>
       <input type="text" name="location" placeholder="City, neighborhood, or address (optional)" />
     
-      <label>Date of Last Cleanup</label>
+      <label>Date of Last Service</label>
       <input 
         type="text" 
         name="lastCleanup" 
@@ -504,15 +504,18 @@
         Send Message
       </button>
     
-      <div class="note">
-        If you’re requesting a quote, we may follow up with a quick walkthrough or clarification so we can provide accurate pricing.
-      </div>
+    <div class="note">
+      If you’re requesting a quote, we may follow up with a few questions or schedule a quick walkthrough so we can provide accurate pricing.
+    </div>
     
     </form>
 
   </section>
 
-</main>
+  <div class="footer">
+    A Demo Website by Vertex Collective
+  </div>
+  
 </main>
 
 <div class="demo-modal" id="demoModal" aria-hidden="true">
@@ -561,39 +564,6 @@
     }
   });
 </script>
-
-</body>
-</html>
-
-  <script>
-  const contactForm = document.getElementById("contactForm");
-  const demoModal = document.getElementById("demoModal");
-  const demoModalClose = document.getElementById("demoModalClose");
-  const demoModalButton = document.getElementById("demoModalButton");
-
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    contactForm.reset();
-
-    demoModal.classList.add("show");
-    demoModal.setAttribute("aria-hidden", "false");
-  });
-
-  function closeDemoModal() {
-    demoModal.classList.remove("show");
-    demoModal.setAttribute("aria-hidden", "true");
-  }
-
-  demoModalClose.addEventListener("click", closeDemoModal);
-  demoModalButton.addEventListener("click", closeDemoModal);
-
-  demoModal.addEventListener("click", function (e) {
-    if (e.target === demoModal) {
-      closeDemoModal();
-    }
-  });
-</script>    
   
 </body>
 </html>
